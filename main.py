@@ -1,7 +1,9 @@
 import requests as req
 import notion
+import json
 
-notion_token = "secret_ykDPlXr7R51BvJiGhTn31cRAmggRZlBbrJx61LLbnqK"
+
+notion_token = json.load(open("token.json"))["notion"]
 
 def main():
     filter = {
