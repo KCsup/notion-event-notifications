@@ -30,11 +30,11 @@ def make_notion_request(
     
     match method.lower():
         case "get":
-            response = req.get(url, params=params, headers=headers)
+            response = req.get(url, json=params, headers=headers)
         case "post":
-            response = req.post(url, params=params, headers=headers)
+            response = req.post(url, json=params, headers=headers)
         case "patch":
-            response = req.patch(url, params=params, headers=headers)
+            response = req.patch(url, json=params, headers=headers)
         case _:
             raise InvalidHTTPMethod(f"HTTP method '{method}' is invalid.")
 
